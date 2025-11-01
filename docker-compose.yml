@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ./api-tareas
+    container_name: tareas-api
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./api-tareas:/app
+    networks:
+      - tareas-net
+
+  frontend:
+    build: ./ui-tareas
+    container_name: tareas-front
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    networks:
+      - tareas-net
+
+networks:
+  tareas-net:
+    driver: bridge

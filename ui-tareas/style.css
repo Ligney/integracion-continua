@@ -1,0 +1,89 @@
+/* Estilos generales */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f3e8ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Contenedor principal */
+.container {
+  background: #FEE2E2;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px 40px;
+  width: 320px;
+  text-align: center;
+}
+
+/* Título */
+h1 {
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* subtitulo */
+h4 {
+  color: #333;
+  margin-bottom: 25px;
+  font-weight: 300;
+}
+
+/* Grupo de entrada */
+.input-group {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+/* Campo de texto */
+input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #cc2929;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Botón */
+button {
+  background-color: #fc6d6d;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #ec6e739c;
+}
+
+/* Lista de tareas */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+li {
+  background-color: #eef3f7;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li.done {
+  text-decoration: line-through;
+  color: #999;
+}
