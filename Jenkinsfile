@@ -12,7 +12,7 @@ pipeline {
                 echo "Clonando repositorio..."
                 git branch: 'main',
                     credentialsId: env.GITHUB_CRED,
-                    url: 'https://github.com/milenajah/integracion-continua'
+                    url: 'https://github.com/Ligney/integracion-continua.git'
             }
         }
 
