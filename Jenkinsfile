@@ -17,11 +17,19 @@ pipeline {
         }
 
         stage('Tests y Cobertura') {
+            agent {
+                docker {
+                    image 'python:3.10'
+                }
+            }
             steps {
                 dir('api-tareas') {
-                    sh 'coverage run -m pytest'
-                    sh 'coverage report --fail-under=80'
-                    sh 'coverage html'
+                    sh '''
+                        pip install pytest coverage
+                        coverage run -m pytest
+                        coverage report --fail-under=80
+                        coverage html
+                    '''
                 }
             }
         }
