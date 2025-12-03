@@ -5,7 +5,7 @@ services:
     build: ./api-tareas
     container_name: tareas-api
     ports:
-      - "5000:5000"
+      - "5001:5000"
     volumes:
       - ./api-tareas:/app
     networks:
