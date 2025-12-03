@@ -2,4 +2,6 @@ flask==3.0.3
 flask-cors==5.0.0
 sqlalchemy==2.0.36
 python-dotenv==1.0.1
-pyodbc==5.1.0     # Solo si vas a usar SQL Server
+pyodbc==5.1.0
+pytest==9.0.1
+coverage==7.12.0

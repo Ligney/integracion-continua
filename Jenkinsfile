@@ -25,7 +25,7 @@ pipeline {
             steps {
                 dir('api-tareas') {
                     sh '''
-                        pip install pytest coverage
+                        pip install -r api-tareas/requirements.txt
                         coverage run -m pytest
                         coverage report --fail-under=80
                         coverage html
