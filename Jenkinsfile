@@ -16,6 +16,16 @@ pipeline {
             }
         }
 
+        stage('Tests y Cobertura') {
+            steps {
+                dir('api-tareas') {
+                    sh 'coverage run -m pytest'
+                    sh 'coverage report --fail-under=80'
+                    sh 'coverage html'
+                }
+            }
+        }
+
         stage('Build Backend') {
             steps {
                 echo "Construyendo imagen del backend (api-tareas)..."
